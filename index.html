@@ -2,9 +2,6 @@
 <html lang="en">
 
 <style>
-  body {
-    background-image: linear-gradient(#ffffff, #82c1ff, #1E90FF);
-  }
   #header {
     font-family: sans-serif;
     background-color: dodgerblue;
@@ -13,6 +10,8 @@
     padding: 170px 50px;
     font-size: 90px;
     font-weight: bold;
+    width: 100%;
+    position: fixed;
   }
   p {
     font-family: Helvetica
@@ -22,3 +21,19 @@
   <div id="header">SevenEagleX</div>
     <p></p>
 </head>
+
+  <script>
+    window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("header").style.fontSize = "30px";
+    document.getElementById("header").style.color = "dodgerblue";
+    document.getElementById("header").style.backgroundColor = "white";
+  } else {
+    document.getElementById("header").style.fontSize = "90px";
+    document.getElementById("header").style.color = "white";
+    document.getElementById("header").style.backgroundColor = "dodgerblue";
+  }
+}
+  </script>
